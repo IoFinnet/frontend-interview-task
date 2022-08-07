@@ -11,6 +11,10 @@
 
 :root {
   font-size: 87.5%;
+  --gap-h: clamp(12px, 2vw, 24px);
+  --gap-v: clamp(9px, 1.5vw, 18px);
+
+  --gap: var(--gap-v) var(--gap-h);
 }
 
 html,

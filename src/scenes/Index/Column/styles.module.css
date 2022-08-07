@@ -1,5 +1,60 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: hidden;
+}
+
+.container--TO_DO {
+  --io-color-bg: var(--io-color-card-todo-bg);
+}
+
+.container--IN_PROGRESS {
+  --io-color-bg: var(--io-color-card-inprogress-bg);
+}
+
+.container--DONE {
+  --io-color-bg: var(--io-color-card-done-bg);
+}
+
+.listContainer {
+  display: grid;
+  grid-template:
+    [content-start]
+    "before" var(--gap-v)
+    "." 1fr
+    "after" var(--gap-v)
+    [content-end]
+    / 1fr;
+  border-radius: 20px;
+  margin-top: var(--gap-v);
+  overflow: hidden;
+  background-color: var(--io-color-bg);
+}
+
+.listContainer::before,
+.listContainer::after {
+  position: relative;
+  content: "";
+  display: block;
+}
+.listContainer::before {
+  grid-area: before;
+  background: linear-gradient(to top, transparent, var(--io-color-bg));
+}
+.listContainer::after {
+  grid-area: after;
+  background: linear-gradient(to bottom, transparent, var(--io-color-bg));
+}
+
+.list {
+  grid-area: content;
+  max-height: 100%;
+  padding: var(--gap);
+  overflow-y: auto;
+}
+
+.items {
+  display: grid;
+  align-content: start;
+  gap: var(--gap);
 }

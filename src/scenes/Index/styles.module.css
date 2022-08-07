@@ -1,4 +1,17 @@
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  display: grid;
+  padding: var(--gap);
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: var(--gap);
+  max-width: 1000px;
+  overflow: hidden;
+  overflow-x: auto;
 }

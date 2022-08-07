@@ -4,6 +4,10 @@
   --io-color-bg-text-subtle: hsl(300, 10%, 37%);
 
   --io-color-card-bg: hsl(0, 0%, 100%);
+
+  --io-color-card-todo-bg: hsl(20, 30%, 80%);
+  --io-color-card-inprogress-bg: hsl(50, 30%, 80%);
+  --io-color-card-done-bg: hsl(90, 30%, 80%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,5 +17,9 @@
     --io-color-bg-text-subtle: hsl(0, 0%, 80%);
 
     --io-color-card-bg: hsl(0, 0%, 0%);
+
+    --io-color-card-todo-bg: hsl(20, 10%, 15%);
+    --io-color-card-inprogress-bg: hsl(50, 10%, 15%);
+    --io-color-card-done-bg: hsl(90, 10%, 15%);
   }
 }
