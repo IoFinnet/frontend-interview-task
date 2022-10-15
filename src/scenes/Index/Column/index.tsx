@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { Job, Status } from "../../../generated/graphql";
 import { Card } from "../Card";
 

@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { Status, useJobsQuery } from "../../generated/graphql";
-import { Card } from "./Card";
 import { Column } from "./Column";
 import { Navbar } from "./Navbar";
 
@@ -21,9 +19,13 @@ export function Index() {
     <div className={styles.outerContainer}>
       <Navbar />
       <div className={styles.container}>
-        <Column jobs={data.jobs} filterStatus={Status.ToDo} title={"TO DO"}/>
-        <Column jobs={data.jobs} filterStatus={Status.InProgress} title={"IN PROGRESS"}/>
-        <Column jobs={data.jobs} filterStatus={Status.Done} title={"DONE"}/>
+        <Column jobs={data.jobs} filterStatus={Status.ToDo} title={"TO DO"} />
+        <Column
+          jobs={data.jobs}
+          filterStatus={Status.InProgress}
+          title={"IN PROGRESS"}
+        />
+        <Column jobs={data.jobs} filterStatus={Status.Done} title={"DONE"} />
       </div>
     </div>
   );
