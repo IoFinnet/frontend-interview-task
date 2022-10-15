@@ -1,4 +1,55 @@
+.outerContainer {
+  height: 100vh;
+}
+
 .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  height: 85%;
+}
+
+.innerContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.headerText {
+  font-size: large;
+  font-weight: 5px;
+  text-align: center;
+}
+
+.header {
+  border: 1px solid black;
+  width: 95%;
+  padding: 5px 10px 5px 5px;
+  border-radius: 10px;
+}
+
+.todo {
+  background-color: #ffa7a7;
+}
+
+.inProgress {
+  background-color: #fdecac;
+}
+
+.done {
+  background-color: #d7f8db;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    min-width: 600px;
+  }
+  .outerContainer {
+    width: 100%;
+    overflow-x: scroll;
+  }
 }

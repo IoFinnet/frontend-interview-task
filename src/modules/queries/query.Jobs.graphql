@@ -4,5 +4,6 @@ query Jobs {
     id
     status
     createdAt
+    name
   }
 }

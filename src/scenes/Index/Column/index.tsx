@@ -5,5 +5,5 @@ import styles from "./styles.module.css";
 type Props = { children?: ReactNode };
 
 export function Column({ children }: Props) {
-  return <div className={styles.container}>{children}</div>;
+  return <section className={styles.container}>{children}</section>;
 }

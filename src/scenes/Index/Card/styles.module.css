@@ -1,7 +1,18 @@
 .container {
+  display: flex;
+  flex-direction: column;
   background: var(--io-color-card-bg);
   border-radius: 12px;
   padding: 18px 24px;
+  width: 90%;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 3px #888888;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: scale(1.05);
 }
 
 .title {
@@ -9,7 +20,34 @@
   font-size: 1.1rem;
 }
 
+.titleContainer {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .subtitle {
   font-size: 0.9rem;
   color: var(--io-color-bg-text-subtle);
+}
+
+.status {
+  border: 1px solid black;
+  padding: 3px 5px 5px 3px;
+  align-self: flex-start;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.toDo {
+  background-color: #ffa7a7;
+}
+
+.inProgress {
+  background-color: #fdecac;
+}
+
+.done {
+  background-color: #d7f8db;
 }

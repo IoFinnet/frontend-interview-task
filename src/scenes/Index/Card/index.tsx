@@ -6,11 +6,11 @@ import styles from "./styles.module.css";
 
 type Props = Omit<JobsQuery["jobs"][number], "__typename">;
 
-export function Card({ id, status, createdAt }: Props) {
+export function Card({ id, status, createdAt, name }: Props) {
   return (
     <article className={styles.container}>
       <h1 className={styles.title} title={id}>
-        {id}
+        <div className={styles.titleContainer}>{name}</div>
       </h1>
       <div className={styles.subtitle}>
         {new Intl.DateTimeFormat(undefined, {
@@ -18,7 +18,19 @@ export function Card({ id, status, createdAt }: Props) {
           timeStyle: "short",
         }).format(DateTime.fromISO(createdAt).toJSDate())}
       </div>
-      <div>{status}</div>
+      <div
+        className={`
+          ${styles.status} 
+          ${
+            status === "TO_DO"
+              ? styles.toDo
+              : status === "IN_PROGRESS"
+              ? styles.inProgress
+              : styles.done
+          }`}
+      >
+        {status}
+      </div>
     </article>
   );
 }
