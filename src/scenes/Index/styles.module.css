@@ -12,38 +12,6 @@
   height: 85%;
 }
 
-.innerContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 100%;
-}
-
-.headerText {
-  font-size: large;
-  font-weight: 5px;
-  text-align: center;
-}
-
-.header {
-  border: 1px solid black;
-  width: 95%;
-  padding: 5px 10px 5px 5px;
-  border-radius: 10px;
-}
-
-.todo {
-  background-color: #ffa7a7;
-}
-
-.inProgress {
-  background-color: #fdecac;
-}
-
-.done {
-  background-color: #d7f8db;
-}
-
 @media only screen and (max-width: 600px) {
   .container {
     min-width: 600px;
