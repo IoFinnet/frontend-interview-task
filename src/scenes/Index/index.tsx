@@ -15,18 +15,29 @@ export function Index() {
     return <div>Something went wrong :(</div>;
   }
 
+  const jobsData = [
+    {
+      jobs: data.jobs.filter((it) => it.status === Status.ToDo),
+      title: "TO DO",
+    },
+    {
+      jobs: data.jobs.filter((it) => it.status === Status.InProgress),
+      title: "IN PROGRESS",
+    },
+    {
+      jobs: data.jobs.filter((it) => it.status === Status.Done),
+      title: "DONE",
+    },
+  ];
+
   return (
     <div className={styles.outerContainer}>
       <Navbar />
-      <div className={styles.container}>
-        <Column jobs={data.jobs} filterStatus={Status.ToDo} title={"TO DO"} />
-        <Column
-          jobs={data.jobs}
-          filterStatus={Status.InProgress}
-          title={"IN PROGRESS"}
-        />
-        <Column jobs={data.jobs} filterStatus={Status.Done} title={"DONE"} />
-      </div>
+      <main className={styles.container}>
+        {jobsData.map((item) => (
+          <Column key={item.title} jobs={item.jobs} title={item.title} />
+        ))}
+      </main>
     </div>
   );
 }
