@@ -6,10 +6,10 @@ import styles from "./styles.module.css";
 
 type Props = Omit<JobsQuery["jobs"][number], "__typename">;
 
-export function Card({ id, status, createdAt, name }: Props) {
+export function Card({ status, createdAt, name }: Props) {
   return (
     <article className={styles.container}>
-      <h1 className={styles.title} title={id}>
+      <h1 className={styles.title} title={name}>
         <div className={styles.titleContainer}>{name}</div>
       </h1>
       <div className={styles.subtitle}>
