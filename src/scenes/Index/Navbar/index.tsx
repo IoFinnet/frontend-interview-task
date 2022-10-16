@@ -2,9 +2,9 @@ import styles from "./styles.module.css";
 
 export function Navbar() {
   return (
-    <nav className={styles.container}>
-      <header className={styles.title}>Tasks Board</header>
+    <header className={styles.container}>
+      <title className={styles.title}>Tasks Board</title>
       <hr className={styles.horizontalLine} />
-    </nav>
+    </header>
   );
 }
